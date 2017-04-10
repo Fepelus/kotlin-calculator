@@ -1,0 +1,16 @@
+apply plugin: 'application'
+apply plugin: 'kotlin'
+
+dependencies {
+    compile (
+        project(':calculator'),
+        fileTree(dir: 'libs', include: ['*.jar'])
+    )
+
+    sourceCompatibility = "1.7"
+    targetCompatibility = "1.7"
+
+}
+
+mainClassName = 'com.fepelus.calculator.cli.Application'
+
